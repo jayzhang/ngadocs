@@ -191,6 +191,7 @@ socket.on('msg', function(msg) {
   "sendTime":1628397863789,  //发送时间
   "session":"pet_2_3", //会话
   "uids":[2,3]  //消息收发用户id列表
+  "type": 0 // 消息类型 0-文本  1、2-图片  3-语音 4-视频 
 }
 ```
 #### 客户端发送消息
@@ -203,5 +204,6 @@ socket.emit('msg', {app: 'pet', target: 3, content:'hello'});
     "app":"pet",  //应用标识
     "target":3,   //消息接收者的uid
     "content":"hello", //消息内容
+    "type": 0 // 消息类型 0-文本  1、2-图片  3-语音 4-视频 
 }
 ```
